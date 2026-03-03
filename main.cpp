@@ -7,4 +7,32 @@ using namespace std;
 
 // 2. MAX_SPACES constant
 static const int MAX_SPACES = 40;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
+
+class MonopolySpace {
+public:
+    string propertyName;
+    string propertyColor;
+    int value;
+    int rent;
+    MonopolySpace() {
+        propertyName = "";
+        propertyColor = "";
+        value = 0;
+        rent = 0;
+    }
+    MonopolySpace(string name, string color, int val, int r) {
+        propertyName = name;
+        propertyColor = color;
+        value = val;
+        rent = r;
+    }
+    bool isEqual(MonopolySpace other) {
+        return propertyName == other.propertyName;
+    }
+    void print() {
+        cout << propertyName
+             << " : " << propertyColor
+             << " : $" << value
+             << " : Rent $" << rent;
+    }
+};
