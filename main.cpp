@@ -47,3 +47,41 @@ public:
         nextNode = nullptr;
     }
 };
+template <typename T>
+class CircularLinkedList {
+private:
+    Node<T>* headNode;
+    Node<T>* tailNode;
+    Node<T>* playerNode;
+    int nodeCount;
+    int passGoCount;
+
+public:
+    CircularLinkedList() {
+        headNode = nullptr;
+        tailNode = nullptr;
+        playerNode = nullptr;
+        nodeCount = 0;
+        passGoCount = 0;
+    }
+
+    bool addSpace(T value) {
+
+        if (nodeCount >= MAX_SPACES)
+            return false;
+
+        Node<T>* newNode = new Node<T>(value);
+
+        if (headNode == nullptr) {
+            headNode = tailNode = playerNode = newNode;
+            newNode->nextNode = headNode;
+        } else {
+            tailNode->nextNode = newNode;
+            tailNode = newNode;
+            tailNode->nextNode = headNode;
+        }
+
+        nodeCount++;
+        return true;
+    }
+};
