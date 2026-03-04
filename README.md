@@ -11,14 +11,14 @@
 **Commit(s): Class Setup for monopoly
 ---
 ### Entry 2
-**Date:** YYYY-MM-DD
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision
-**Task worked on:**
-**Issue or decision:**
-**Error message / symptom (if applicable):**
-**What I tried:**
-**Fix / resolution (or final decision):**
-**Commit(s):**
+**Date:** 2026-03-03
+**Entry Type:** Engineering Decision
+**Task worked on:** CircularLinkedList class 
+**Issue or decision:** Made circular structure with MAX_SPACES limit
+**Error message / symptom (if applicable):** addSpace nodes couldn't be read
+**What I tried:** Adjusted the Max_Space limit
+**Fix / resolution (or final decision):** Move the addSpace function into the class
+**Commit(s):** Added CircularLinkedList class with addSpace method
 ---
 ### Entry 3
 **Date:** YYYY-MM-DD
