@@ -14,21 +14,21 @@
 **Date:** 2026-03-03
 **Entry Type:** Engineering Decision
 **Task worked on:** CircularLinkedList class 
-**Issue or decision:** Made circular structure with MAX_SPACES limit
-**Error message / symptom (if applicable):** addSpace nodes couldn't be read
+**Issue or decision:** Made circular structure with MAX_SPACES limit, addSpace nodes couldn't be read
+**Error message / symptom (if applicable):** 
 **What I tried:** Adjusted the Max_Space limit
 **Fix / resolution (or final decision):** Move the addSpace function into the class
 **Commit(s):** Added CircularLinkedList class with addSpace method
 ---
 ### Entry 3
-**Date:** YYYY-MM-DD
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision
-**Task worked on:**
-**Issue or decision:**
-**Error message / symptom (if applicable):**
-**What I tried:**
-**Fix / resolution (or final decision):**
-**Commit(s):**
+**Date:** 2026-03-04
+**Entry Type:** Engineering Decision
+**Task worked on:** addMany and printBoard functions
+**Issue or decision:** addMany was outside the template class and board object was missing
+**Error message / symptom (if applicable):** Template type T was not recognized and board was not declared
+**What I tried:** tested moving the function into the class
+**Fix / resolution (or final decision):** Moved addMany into CircularLinkedList and called it in main() on the board.
+**Commit(s):** Fixed the board and the addMany
 ---
 ### Entry 4
 **Date:** YYYY-MM-DD
