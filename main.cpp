@@ -111,9 +111,7 @@ public:
     void printBoard() {
         if (headNode == nullptr)
             return;
-
         Node<T>* temp = headNode;
-
         do {
             temp->data.print();
             cout << endl;
