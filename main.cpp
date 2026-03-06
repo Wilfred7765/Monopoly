@@ -88,6 +88,19 @@ public:
         }
         return added;
     }
+    void movePlayer(int steps) {
+
+        if (playerNode == nullptr)
+            return;
+
+        for (int i = 0; i < steps; i++) {
+
+            if (playerNode == tailNode)
+                passGoCount++;
+
+            playerNode = playerNode->nextNode;
+        }
+    }
     void printBoard() {
         if (headNode == nullptr)
             return;
@@ -135,4 +148,5 @@ int main() {
     cout << "Monopoly Board:" << endl;
     board.printBoard();
     return 0;
+
 };
