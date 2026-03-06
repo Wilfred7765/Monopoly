@@ -101,52 +101,55 @@ public:
             playerNode = playerNode->nextNode;
         }
     }
-    void printBoard() {
-        if (headNode == nullptr)
-            return;
-        Node<T>* temp = headNode;
-        do {
-            temp->data.print();
-            temp = temp->nextNode;
-        } while (temp != headNode);
-    }
+    // void printBoard() {
+    //     if (headNode == nullptr)
+    //         return;
+    //
+    //     Node<T>* temp = headNode;
+    //
+    //     do {
+    //         temp->data.print();
+    //         cout << endl;
+    //         temp = temp->nextNode;
+    //     } while (temp != headNode);
+    // }
 };
 
-int main() {
-    CircularLinkedList<MonopolySpace> board;
-    vector<MonopolySpace> spaces = {
-        MonopolySpace("Mediterranean Avenue","Brown",60,2),
-        MonopolySpace("Baltic Avenue","Brown",60,4),
-        MonopolySpace("Reading Railroad","Railroad",200,25),
-        MonopolySpace("Oriental Avenue","Light Blue",100,6),
-        MonopolySpace("Vermont Avenue","Light Blue",100,6),
-        MonopolySpace("Connecticut Avenue","Light Blue",120,8),
-        MonopolySpace("St. Charles Place","Pink",140,10),
-        MonopolySpace("Electric Company","Utility",150,0),
-        MonopolySpace("States Avenue","Pink",140,10),
-        MonopolySpace("Virginia Avenue","Pink",160,12),
-        MonopolySpace("Pennsylvania Railroad","Railroad",200,25),
-        MonopolySpace("St. James Place","Orange",180,14),
-        MonopolySpace("Tennessee Avenue","Orange",180,14),
-        MonopolySpace("New York Avenue","Orange",200,16),
-        MonopolySpace("Kentucky Avenue","Red",220,18),
-        MonopolySpace("Indiana Avenue","Red",220,18),
-        MonopolySpace("Illinois Avenue","Red",240,20),
-        MonopolySpace("B. & O. Railroad","Railroad",200,25),
-        MonopolySpace("Atlantic Avenue","Yellow",260,22),
-        MonopolySpace("Ventnor Avenue","Yellow",260,22),
-        MonopolySpace("Water Works","Utility",150,0),
-        MonopolySpace("Marvin Gardens","Yellow",280,24),
-        MonopolySpace("Pacific Avenue","Green",300,26),
-        MonopolySpace("North Carolina Avenue","Green",300,26),
-        MonopolySpace("Pennsylvania Avenue","Green",320,28),
-        MonopolySpace("Short Line","Railroad",200,25),
-        MonopolySpace("Park Place","Blue",350,35),
-        MonopolySpace("Boardwalk","Blue",400,50)
-    };
-    board.addMany(spaces);
-    cout << "Monopoly Board:" << endl;
-    board.printBoard();
-    return 0;
-
-};
+    // int main() {
+    //     CircularLinkedList<MonopolySpace> board;
+    //     vector<MonopolySpace> spaces = {
+    //         MonopolySpace("Mediterranean Avenue","Brown",60,2),
+    //         MonopolySpace("Baltic Avenue","Brown",60,4),
+    //         MonopolySpace("Reading Railroad","Railroad",200,25),
+    //         MonopolySpace("Oriental Avenue","Light Blue",100,6),
+    //         MonopolySpace("Vermont Avenue","Light Blue",100,6),
+    //         MonopolySpace("Connecticut Avenue","Light Blue",120,8),
+    //         MonopolySpace("St. Charles Place","Pink",140,10),
+    //         MonopolySpace("Electric Company","Utility",150,0),
+    //         MonopolySpace("States Avenue","Pink",140,10),
+    //         MonopolySpace("Virginia Avenue","Pink",160,12),
+    //         MonopolySpace("Pennsylvania Railroad","Railroad",200,25),
+    //         MonopolySpace("St. James Place","Orange",180,14),
+    //         MonopolySpace("Tennessee Avenue","Orange",180,14),
+    //         MonopolySpace("New York Avenue","Orange",200,16),
+    //         MonopolySpace("Kentucky Avenue","Red",220,18),
+    //         MonopolySpace("Indiana Avenue","Red",220,18),
+    //         MonopolySpace("Illinois Avenue","Red",240,20),
+    //         MonopolySpace("B. & O. Railroad","Railroad",200,25),
+    //         MonopolySpace("Atlantic Avenue","Yellow",260,22),
+    //         MonopolySpace("Ventnor Avenue","Yellow",260,22),
+    //         MonopolySpace("Water Works","Utility",150,0),
+    //         MonopolySpace("Marvin Gardens","Yellow",280,24),
+    //         MonopolySpace("Pacific Avenue","Green",300,26),
+    //         MonopolySpace("North Carolina Avenue","Green",300,26),
+    //         MonopolySpace("Pennsylvania Avenue","Green",320,28),
+    //         MonopolySpace("Short Line","Railroad",200,25),
+    //         MonopolySpace("Park Place","Blue",350,35),
+    //         MonopolySpace("Boardwalk","Blue",400,50)
+    //     };
+    //     board.addMany(spaces);
+    //     cout << "Monopoly Board:" << endl;
+    //     board.printBoard();
+    //     return 0;
+    //
+    // };
