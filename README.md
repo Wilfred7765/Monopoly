@@ -31,14 +31,14 @@
 **Commit(s):** Fixed the board and the addMany
 ---
 ### Entry 4
-**Date:** YYYY-MM-DD
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision
-**Task worked on:**
-**Issue or decision:**
-**Error message / symptom (if applicable):**
-**What I tried:**
-**Fix / resolution (or final decision):**
-**Commit(s):**
+**Date:** 2026-03-05
+**Entry Type:** Engineering Decision
+**Task worked on:** movePlayer, printFromPlayer, and getPassGoCount methods
+**Issue or decision:** Needed to move the player and track position and go passes.
+**Error message / symptom (if applicable):** Player movement didn’t track passing GO correctly.
+**What I tried:** Tested step movement and printing and looping from player node.
+**Fix / resolution (or final decision):** Added proper checks for when playerNode reaches tailnodes, and increased passGoCount before the next node
+**Commit(s):** Added movePlayer() with GO tracking,printFromPlayer() for player position, and getPassGoCount() method 
 ---
 ### Entry 5
 **Date:** YYYY-MM-DD
