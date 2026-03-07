@@ -148,6 +148,19 @@ public:
         } while (current != headNode);
         return false;
     }
+    vector<string> findByColor(string color) {
+        vector<string> matches;
+        if (headNode == nullptr)
+            return matches;
+        Node<T>* current = headNode;
+        do {
+            if (current->data.propertyColor == color)
+                matches.push_back(current->data.propertyName);
+            current = current->nextNode;
+        } while (current != headNode);
+        return matches;
+    }
+
 };
 int rollDice2to12() {
     return (rand() % 6 + 1) + (rand() % 6 + 1);
@@ -201,6 +214,7 @@ int rollDice2to12() {
         MonopolySpace("Luxury Tax","Tax",0,0),
         MonopolySpace("Boardwalk","Blue",400,50)
     };
+
         board.addMany(spaces);
         cout << "Monopoly Board:" << endl;
         board.printBoard();
