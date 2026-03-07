@@ -171,6 +171,19 @@ public:
         } while (current != headNode);
         return count;
     }
+    void clear() {
+        if (headNode == nullptr)
+            return;
+        tailNode->nextNode = nullptr;
+        Node<T>* current = headNode;
+        while (current != nullptr) {
+            Node<T>* temp = current;
+            current = current->nextNode;
+            delete temp;
+        }
+        headNode = tailNode = playerNode = nullptr;
+        nodeCount = 0;
+    }
 
 };
 int rollDice2to12() {
