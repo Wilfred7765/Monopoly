@@ -35,20 +35,20 @@
 **Entry Type:** Engineering Decision
 **Task worked on:** movePlayer, printFromPlayer, and getPassGoCount methods
 **Issue or decision:** Needed to move the player and track position and go passes.
-**Error message / symptom (if applicable):** Player movement didn’t track passing GO correctly.
+**Error message / symptom (if applicable):** Player movement didn’t track passing GO correctly
 **What I tried:** Tested step movement and printing and looping from player node.
 **Fix / resolution (or final decision):** Added proper checks for when playerNode reaches tailnodes, and increased passGoCount before the next node
 **Commit(s):** Added movePlayer() with GO tracking,printFromPlayer() for player position, and getPassGoCount() method 
 ---
 ### Entry 5
-**Date:** YYYY-MM-DD
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision
-**Task worked on:**
-**Issue or decision:**
-**Error message / symptom (if applicable):**
-**What I tried:**
-**Fix / resolution (or final decision):**
-**Commit(s):**
+**Date:** 2026-03-06
+**Entry Type:** Engineering Decision
+**Task worked on:** removeByName and findByColor features
+**Issue or decision:** Create functions to remove a property by name while updating pointers, and finds/return all properties with a specific color
+**Error message / symptom (if applicable):** Removing the head or tail could break the list or leave bad pointers
+**What I tried:** Used a do-while loop and tracked nodes to reconnect the list after deletion
+**Fix / resolution (or final decision):** Updated pointers and decreased nodeCount
+**Commit(s):** Added removeByName for circular linked list node deletion and findByColor to return property names matching a color
 ---
 ### Entry 6
 **Date:** YYYY-MM-DD
