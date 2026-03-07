@@ -160,6 +160,17 @@ public:
         } while (current != headNode);
         return matches;
     }
+    int countSpaces() {
+        if (headNode == nullptr)
+            return 0;
+        int count = 0;
+        Node<T>* current = headNode;
+        do {
+            count++;
+            current = current->nextNode;
+        } while (current != headNode);
+        return count;
+    }
 
 };
 int rollDice2to12() {
