@@ -120,6 +120,34 @@ public:
             temp = temp->nextNode;
         } while (temp != headNode);
     }
+    bool removeByName(string name) {
+        if (headNode == nullptr)
+            return false;
+        Node<T>* current = headNode;
+        Node<T>* prev = tailNode;
+        do {
+            if (current->data.propertyName == name) {
+                if (headNode == tailNode) {
+                    delete current;
+                    headNode = tailNode = playerNode = nullptr;
+                } else {
+                    prev->nextNode = current->nextNode;
+                    if (current == headNode)
+                        headNode = current->nextNode;
+                    if (current == tailNode)
+                        tailNode = prev;
+                    if (playerNode == current)
+                        playerNode = current->nextNode;
+                    delete current;
+                }
+                nodeCount--;
+                return true;
+            }
+            prev = current;
+            current = current->nextNode;
+        } while (current != headNode);
+        return false;
+    }
 };
 int rollDice2to12() {
     return (rand() % 6 + 1) + (rand() % 6 + 1);
