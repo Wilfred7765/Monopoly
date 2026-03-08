@@ -307,9 +307,11 @@ int main() {
     board.addMany(spaces);
     cout << "Monopoly Board:\n";
     board.printBoard();
+
     // -------------------------------
     // Playable Traversal Loop
     // -------------------------------
+
     for (int turn = 1; turn <= 10; turn++) {
         int roll = rollDice2to12();
         cout << "\nTurn " << turn
