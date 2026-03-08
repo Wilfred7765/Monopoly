@@ -66,7 +66,7 @@ tailNode->nextNode = headNode;
 #Function List and Explanations
 
 addSpace(T value)
-Adds a new space to the board.
+This function adds a new space to the board.
 Behavior:
 - Creates a new node
 - Adds node ot the end of the list (tail)
@@ -85,13 +85,32 @@ Returns:
 The number of spaces added to the board.
 
 movePlayer(int steps)
-Moves the player forward around the board.
+This function moves the player forward around the board.
 Behavior:
 - Traverses the circular list node-by-node
 - Moves exactly steps nodes forward
 - Detects when the player passes the tail node
 - Increases passGoCount when the player passes GO
 This function uses only pointer traversal, no indexing.
+
+printFromPlayer(int count)
+This function shows the spaces starting from the player's current position.
+Behavior:
+- Prints count consecutive spaces
+- Moves forward using pointer traversal
+- Stops after the specified number of spaces
+Used to display nearby board spaces after a move.
+
+getPassGoCount()
+This function returns how many times the player has passed GO.
+
+printBoard()
+This function prints the entire board.
+Behavior:
+- Starts from headNode
+- Moves through circular list
+- Stops after returning to the starting node
+Uses a do–while loop so that every space is printed exactly once.
 
 
 
