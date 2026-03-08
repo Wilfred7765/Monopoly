@@ -253,6 +253,8 @@ int main() {
         board.movePlayer(roll);
         cout << "Board view from player (next 5 spaces):\n";
         board.printFromPlayer(5);
+        cout << "Player landed on: ";
+        board.printFromPlayer(1);
         cout << "Times passed GO: "
              << board.getPassGoCount() << endl;
     }
