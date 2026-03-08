@@ -125,6 +125,7 @@ true  -> if space was deleted
 false -> if no matching space exists
 
 findByColor(string color)
+
 This function finds spaces with a specific color group.
 Behavior:
 - Traverses the circular list once
@@ -133,6 +134,7 @@ Returns:
 The vector of matching property names.
 
 countSpaces()
+
 This function counts how many spaces are on the board.
 Behavior:
 - Traverses the circular linked list
@@ -140,6 +142,7 @@ Behavior:
 Useful for validation and debugging.
 
 clear()
+
 This function removes every space in the board and frees memory.
 Steps:
 1. Break the circular link
