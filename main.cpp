@@ -55,6 +55,7 @@ public:
 // -------------------------------
 // Circular Linked List class
 // Spring 2026 version: traversable board
+// -------------------------------
 template <typename T>
 class CircularLinkedList {
 private:
