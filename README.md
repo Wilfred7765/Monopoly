@@ -20,5 +20,42 @@ The addspace() function checks the limit before adding more nodes, and it will r
 This makes it so that circular list never exceeds 40 spaces.
 
 #Build
+This program complies using g++:
+g++ -std=c++17 monopoly_board.cpp -o monopoly_board
+
+#Run
+Run the program with:
+./monopoly_board
+
+The program will: 
+- Build a monopoly board
+- Display all spaces
+- Simulate 10 player turns
+- Show player positions and nearby spaces after each dice roll
+
+#Data Structures
+
+1. MonopolySpace Class
+The MonopolySpace class represents one space on the board.
+The space stores:
+- propertyName – the name of the space
+- propertyColor – the color group of the property
+- value – the purchase price
+- rent – the rent amount
+Example of a space: Boardwalk : Blue : $400 : Rent $50
+The class also has a constructor to set the space's information and print() function to display space.
+
+2. Node Template Class
+The Node<T> class represents a node in the circular linked list.
+Each node contains:
+- data → the MonopolySpace object
+- nextNode → pointer to the next node
+The node can store different data types because it is a template class.
+
+3. CircularLinkedList Template Class
+
+
+
+
 
 
