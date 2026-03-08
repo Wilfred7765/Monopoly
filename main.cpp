@@ -191,9 +191,12 @@ int rollDice2to12() {
 }
 
 
-    int main() {
-        CircularLinkedList<MonopolySpace> board;
-        vector<MonopolySpace> spaces = {
+int main() {
+    srand(time(0));   // initialize random seed
+
+    CircularLinkedList<MonopolySpace> board;
+
+    vector<MonopolySpace> spaces = {
         MonopolySpace("GO","Special",0,0),
         MonopolySpace("Mediterranean Avenue","Brown",60,2),
         MonopolySpace("Community Chest","Special",0,0),
@@ -239,9 +242,20 @@ int rollDice2to12() {
         MonopolySpace("Boardwalk","Blue",400,50)
     };
 
-        board.addMany(spaces);
-        cout << "Monopoly Board:" << endl;
-        board.printBoard();
-        return 0;
+    board.addMany(spaces);
+    cout << "Monopoly Board:\n";
+    board.printBoard();
 
-    };
+    for (int turn = 1; turn <= 10; turn++) {
+        int roll = rollDice2to12();
+        cout << "\nTurn " << turn
+             << " | Rolled: " << roll << endl;
+        board.movePlayer(roll);
+        cout << "Board view from player (next 5 spaces):\n";
+        board.printFromPlayer(5);
+        cout << "Times passed GO: "
+             << board.getPassGoCount() << endl;
+    }
+
+    return 0;
+}
