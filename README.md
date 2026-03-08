@@ -66,6 +66,7 @@ tailNode->nextNode = headNode;
 #Function List and Explanations
 
 addSpace(T value)
+
 This function adds a new space to the board.
 Behavior:
 - Creates a new node
@@ -77,6 +78,7 @@ true  -> if space is added succesfully
 false -> if board is already has 40 spaces
 
 addMany(vector<T> values)
+
 This function adds several spaces to the board at once.
 Behavior:
 - Calls addSpace() for each value
@@ -85,6 +87,7 @@ Returns:
 The number of spaces added to the board.
 
 movePlayer(int steps)
+
 This function moves the player forward around the board.
 Behavior:
 - Traverses the circular list node-by-node
@@ -94,6 +97,7 @@ Behavior:
 This function uses only pointer traversal, no indexing.
 
 printFromPlayer(int count)
+
 This function shows the spaces starting from the player's current position.
 Behavior:
 - Prints count consecutive spaces
@@ -102,9 +106,11 @@ Behavior:
 Used to display nearby board spaces after a move.
 
 getPassGoCount()
+
 This function returns how many times the player has passed GO.
 
 printBoard()
+
 This function prints the entire board.
 Behavior:
 - Starts from headNode
