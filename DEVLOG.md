@@ -57,5 +57,16 @@
 **Issue or decision:** Need functions to clear list and count spaces.
 **Error message / symptom (if applicable):** Inifinte loops w3hen clearing the list
 **What I tried:** Looped through the list and counted each node and break the circular link before deleting nodes
-**Fix / resolution (or final decision):** Temporarily broke the circular list, deleted each node one by one and reset
+**Fix / resolution (or final decision):** Temporarily broke the circular list, deleted each node one by one then reset
 **Commit(s):** Implemented countSpaces and clear methods
+---
+### Entry 7
+**Date:** 2026-03-07
+**Entry Type:** Engineering Decision
+**Task worked on:** Game loop for player turns
+**Issue or decision:** Need to simulate how a player movement
+**Error message / symptom (if applicable):** 
+**What I tried:** Made a loop that runs 10 times with dice simulation
+**Fix / resolution (or final decision):** Used dice to move player then print next 5 spaces and times go is passed
+**Commit(s):** Implemented player traverse loop
+
