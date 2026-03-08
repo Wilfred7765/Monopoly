@@ -53,6 +53,46 @@ Each node contains:
 The node can store different data types because it is a template class.
 
 3. CircularLinkedList Template Class
+The CircularLinkedList<T> class manages the board and performs all list operations.
+Internal Pointers:
+- headNode -> first space on the board
+- tailNode -> last space (links back to head)
+- playerNode -> current player position
+- nodeCount -> how many spaces are on the board
+- passGoCount -> number of times player passed GO
+The program connects the last node back to the first node to have a circular structure:
+tailNode->nextNode = headNode;
+
+#Function List and Explanations
+
+addSpace(T value)
+Adds a new space to the board.
+Behavior:
+- Creates a new node
+- Adds node ot the end of the list (tail)
+- Keeps list circular
+- Enforces the 40-space limit
+Returns:
+true  -> if space is added succesfully
+false -> if board is already has 40 spaces
+
+addMany(vector<T> values)
+This function adds several spaces to the board at once.
+Behavior:
+- Calls addSpace() for each value
+- Stops adding when the board reaches the capacity
+Returns:
+The number of spaces added to the board.
+
+movePlayer(int steps)
+Moves the player forward around the board.
+Behavior:
+- Traverses the circular list node-by-node
+- Moves exactly steps nodes forward
+- Detects when the player passes the tail node
+- Increases passGoCount when the player passes GO
+This function uses only pointer traversal, no indexing.
+
 
 
 
