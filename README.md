@@ -112,8 +112,41 @@ Behavior:
 - Stops after returning to the starting node
 Uses a do–while loop so that every space is printed exactly once.
 
+removeByName(string name)
 
+This function deletes the first space with the matching name.
+Behavior:
+- Removing the head node
+- Removing the tail node
+- Removing the only node in the list
+- Updates playerNode if needed
+Returns:
+true  -> if space was deleted
+false -> if no matching space exists
 
+findByColor(string color)
+This function finds spaces with a specific color group.
+Behavior:
+- Traverses the circular list once
+- Stores matching property names in a vector<string>
+Returns:
+The vector of matching property names.
+
+countSpaces()
+This function counts how many spaces are on the board.
+Behavior:
+- Traverses the circular linked list
+- Returns the total number of nodes
+Useful for validation and debugging.
+
+clear()
+This function removes every space in the board and frees memory.
+Steps:
+1. Break the circular link
+2. Delete nodes one by one
+3. Reset pointers (headNode, tailNode, playerNode) and counters (nodeCount and passGoCount)
+
+#Traversal and Player Movement Logic
 
 
 
