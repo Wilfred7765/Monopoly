@@ -147,6 +147,16 @@ Steps:
 3. Reset pointers (headNode, tailNode, playerNode) and counters (nodeCount and passGoCount)
 
 #Traversal and Player Movement Logic
+The circular linked list makes the board a continuous loop, so the player can keep moving around without hitting the end.
+Player Movement process:
+1. Roll two dice (sum 2–12)
+2. Call movePlayer(roll)
+3. The function moves the playerNode forward one node at a time
+4. If the player passes the tail node, it counts as passing GO → increment passGoCount
+5. The player continues moving til all steps are completed.
+The board is circular so the traversal will never reach a null pointer:
+Boardwalk -> GO -> Mediterranean Avenue -> ... it will keep looping.
+
 
 
 
