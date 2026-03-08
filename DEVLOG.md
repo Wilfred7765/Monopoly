@@ -44,18 +44,18 @@
 **Date:** 2026-03-06
 **Entry Type:** Engineering Decision
 **Task worked on:** removeByName and findByColor features
-**Issue or decision:** Create functions to remove a property by name while updating pointers, and finds/return all properties with a specific color
+**Issue or decision:** Create functions to remove property by name and updating pointers, and finds/return all properties with a specific color
 **Error message / symptom (if applicable):** Removing the head or tail could break the list or leave bad pointers
 **What I tried:** Used a do-while loop and tracked nodes to reconnect the list after deletion
 **Fix / resolution (or final decision):** Updated pointers and decreased nodeCount
 **Commit(s):** Added removeByName for circular linked list node deletion and findByColor to return property names matching a color
 ---
 ### Entry 6
-**Date:** YYYY-MM-DD
-**Entry Type:** Bug Fix / Edge Case / Engineering Decision
-**Task worked on:**
-**Issue or decision:**
-**Error message / symptom (if applicable):**
-**What I tried:**
-**Fix / resolution (or final decision):**
-**Commit(s):**
+**Date:** 2026-03-07
+**Entry Type:** Edge Case
+**Task worked on:** Helper functions for circular linked list
+**Issue or decision:** Need functions to clear list and count spaces.
+**Error message / symptom (if applicable):** Inifinte loops w3hen clearing the list
+**What I tried:** Looped through the list and counted each node and break the circular link before deleting nodes
+**Fix / resolution (or final decision):** Temporarily broke the circular list, deleted each node one by one and reset
+**Commit(s):** Implemented countSpaces and clear methods
