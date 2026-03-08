@@ -5,9 +5,11 @@
 #include <ctime>
 using namespace std;
 
-// 2. MAX_SPACES constant
+// MAX_SPACES constant
 static const int MAX_SPACES = 40;
-
+// -------------------------------
+// Data class
+// -------------------------------
 class MonopolySpace {
 public:
     string propertyName;
@@ -36,6 +38,9 @@ public:
              << " : Rent $" << rent;
     }
 };
+// -------------------------------
+// Template Node class
+// -------------------------------
 template <typename T>
 class Node {
 public:
@@ -47,6 +52,9 @@ public:
         nextNode = nullptr;
     }
 };
+// -------------------------------
+// Circular Linked List class
+// Spring 2026 version: traversable board
 template <typename T>
 class CircularLinkedList {
 private:
@@ -64,6 +72,9 @@ public:
         nodeCount = 0;
         passGoCount = 0;
     }
+    // -------------------------------
+    // Core A: Add a Space with Capacity Enforcement
+    // -------------------------------
     bool addSpace(T value) {
         if (nodeCount >= MAX_SPACES)
             return false;
@@ -79,6 +90,9 @@ public:
         nodeCount++;
         return true;
     }
+    // -------------------------------
+    // Core B: Add Multiple Spaces at Once
+    // -------------------------------
     int addMany(vector<T> values) {
         int added = 0;
         for (T value : values) {
@@ -88,6 +102,9 @@ public:
         }
         return added;
     }
+    // -------------------------------
+    // Core C: Traversal-Based Player Movement
+    // -------------------------------
     void movePlayer(int steps) {
         if (playerNode == nullptr)
             return;
@@ -97,6 +114,7 @@ public:
             playerNode = playerNode->nextNode;
         }
     }
+
     void printFromPlayer(int count) {
         if (playerNode == nullptr || count <= 0)
             return;
@@ -109,6 +127,9 @@ public:
     }
     int getPassGoCount() {
         return passGoCount;
+        // -------------------------------
+        // Core D: Controlled Board Display
+        // -------------------------------
     }
     void printBoard() {
         if (headNode == nullptr)
@@ -120,6 +141,9 @@ public:
             temp = temp->nextNode;
         } while (temp != headNode);
     }
+    // -------------------------------
+    // Advanced Option A (Level 1): removeByName
+    // -------------------------------
     bool removeByName(string name) {
         if (headNode == nullptr)
             return false;
@@ -148,6 +172,9 @@ public:
         } while (current != headNode);
         return false;
     }
+    // -------------------------------
+    // Advanced Option A (Level 1): findByColor
+    // -------------------------------
     vector<string> findByColor(string color) {
         vector<string> matches;
         if (headNode == nullptr)
@@ -160,6 +187,9 @@ public:
         } while (current != headNode);
         return matches;
     }
+    // -------------------------------
+    // Edge-case helper: countSpaces O(n)
+    // -------------------------------
     int countSpaces() {
         if (headNode == nullptr)
             return 0;
@@ -171,6 +201,9 @@ public:
         } while (current != headNode);
         return count;
     }
+    // -------------------------------
+    // Cleanup
+    // -------------------------------
     void clear() {
         if (headNode == nullptr)
             return;
@@ -186,10 +219,15 @@ public:
     }
 
 };
+// -------------------------------
+// Main: playable loop demo
+// -------------------------------
 int rollDice2to12() {
     return (rand() % 6 + 1) + (rand() % 6 + 1);
 }
-
+// -------------------------------
+// Board Construction Phase
+// -------------------------------
 
 int main() {
     srand(time(0));   // initialize random seed
@@ -245,7 +283,9 @@ int main() {
     board.addMany(spaces);
     cout << "Monopoly Board:\n";
     board.printBoard();
-
+    // -------------------------------
+    // Playable Traversal Loop
+    // -------------------------------
     for (int turn = 1; turn <= 10; turn++) {
         int roll = rollDice2to12();
         cout << "\nTurn " << turn
