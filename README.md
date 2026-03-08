@@ -69,7 +69,7 @@ addSpace(T value)
 This function adds a new space to the board.
 Behavior:
 - Creates a new node
-- Adds node ot the end of the list (tail)
+- Adds node to the end of the list (tail)
 - Keeps list circular
 - Enforces the 40-space limit
 Returns:
